@@ -1,0 +1,49 @@
+<mat-toolbar>
+    <span>Registration</span>
+  </mat-toolbar>
+  <mat-card class="my-card">
+    <mat-card-content>
+        <form class="my-form">
+           <mat-form-field class="full-width">
+                  <mat-label>First Name</mat-label>
+                  <input  matInput [(ngModel)]="firstname" placeholder="First name"  name="fname"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Last Name</mat-label>
+                  <input  matInput [(ngModel)]="lastname" placeholder="Last Name" name="lname"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Address</mat-label>
+                  <input  matInput [(ngModel)]="address" placeholder="Address" name="address"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Email</mat-label>
+                  <input  matInput [(ngModel)]="email" placeholder="Email" name="email">
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Password</mat-label>
+                  <input  matInput [(ngModel)]="password" placeholder="Password"  name="pass" >
+               </mat-form-field>
+
+               <section class="example-section">
+                <label class="example-margin">Gender:</label>
+                <mat-radio-group [(ngModel)]="gender" name="gender"> &nbsp;
+                  <mat-radio-button class="example-margin" name = "male" value="male">Male</mat-radio-button> &nbsp;
+                  <mat-radio-button class="example-margin" name = "female" value="female">Female</mat-radio-button> &nbsp;
+                  <mat-radio-button class="example-margin" name = "other" value="other">Other</mat-radio-button> &nbsp;
+                  <mat-radio-button class="example-margin" name = "specify" value="specify">Do not want to specify</mat-radio-button> &nbsp;
+                </mat-radio-group>
+              </section>
+
+              <mat-form-field>
+                <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="register()" color="primary">REGISTER</button>
+      </mat-card-actions>
+  </mat-card>
