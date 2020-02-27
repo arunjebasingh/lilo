@@ -6,7 +6,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatNativeDateModule,
@@ -14,22 +13,23 @@ import { MatNativeDateModule,
     MatFormFieldModule,
     MatRadioModule,
     MatSidenavModule,
-    MatListModule,} from  '@angular/material';
+    MatListModule,
+    MatExpansionModule,} from  '@angular/material';
 import { MatDatepickerModule } from  '@angular/material/datepicker';
+
 
 
 @NgModule({
   imports: [
-  CommonModule, 
+  CommonModule,
   MatToolbarModule,
-  MatButtonModule, 
+  MatButtonModule,
   MatCardModule,
   MatInputModule,
   MatDialogModule,
   MatTableModule,
   MatMenuModule,
   MatIconModule,
-  MatProgressSpinnerModule,
   MatNativeDateModule,
   MatDatepickerModule,
   MatIconModule,
@@ -42,19 +42,19 @@ import { MatDatepickerModule } from  '@angular/material/datepicker';
   MatListModule,
   MatRadioModule,
   MatSidenavModule,
+  MatExpansionModule,
   ],
 
   exports: [
   CommonModule,
-   MatToolbarModule, 
-   MatButtonModule, 
-   MatCardModule, 
-   MatInputModule, 
-   MatDialogModule, 
-   MatTableModule, 
+   MatToolbarModule,
+   MatButtonModule,
+   MatCardModule,
+   MatInputModule,
+   MatDialogModule,
+   MatTableModule,
    MatMenuModule,
    MatIconModule,
-   MatProgressSpinnerModule,
    MatNativeDateModule,
    MatDatepickerModule,
    MatIconModule,
@@ -67,7 +67,7 @@ import { MatDatepickerModule } from  '@angular/material/datepicker';
    MatListModule,
    MatRadioModule,
    MatSidenavModule,
-
+   MatExpansionModule,
    ],
 })
 export class CustomMaterialModule { }

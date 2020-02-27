@@ -2,6 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSpinner } from '@angular/material';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

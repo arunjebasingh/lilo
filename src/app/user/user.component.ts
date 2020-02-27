@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  storedPosts=[];
+
+
+onAddPost(post){
+  this.storedPosts.push(post);
+}
+
 
   constructor() { }
 
