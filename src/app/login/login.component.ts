@@ -1,29 +1,33 @@
-
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
-import { MatSpinner } from '@angular/material';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../service/authentication.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-
-
 export class LoginComponent implements OnInit {
-  constructor(private router: Router) { }
-username: string;
-password: string;
+
+  username = 'admin';
+  password = 'admin';
+  invalidLogin = false;
+
+  constructor(private router: Router,
+    private loginservice: AuthenticationService) { }
+
   ngOnInit() {
   }
-  login() : void {
-    if(this.username == 'admin' && this.password == 'admin'){
-     this.router.navigate(["user"]);
-    }else {
-      alert("Invalid credentials");
-    }
+
+  checkLogin() {
+    if (this.loginservice.authenticate(this.username, this.password)
+    ) {
+      this.router.navigate(['user']);
+      this.invalidLogin = false;
+    } else
+      this.invalidLogin = true;
   }
+
   register() : void {
     if(true){
      this.router.navigate(["register"]);
@@ -31,4 +35,6 @@ password: string;
       alert("Invalid credentials");
     }
   }
-  }
+
+}
+

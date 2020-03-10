@@ -30,5 +30,4 @@ export class StarComponent implements OnInit {
   onStarClicked(){
     this.starClicked.emit(this.starId);
   }
-
 }

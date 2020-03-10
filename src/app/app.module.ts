@@ -16,6 +16,7 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { SearchComponent } from './search/search.component';
 import { GoogleBookApiService } from './google-book-api.service';
 import { StarComponent } from './star/star.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { StarComponent } from './star/star.component';
     PostListComponent,
     SearchComponent,
     StarComponent,
+    LogoutComponent,
 
   ],
   imports: [

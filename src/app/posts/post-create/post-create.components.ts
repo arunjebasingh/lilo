@@ -11,7 +11,7 @@ export class PostCreateComponent {
   enteredContent="";
   @Output() postCreated = new EventEmitter();
   stars = [1, 2, 3, 4, 5];
-  rating =1;
+  rating = 1;
   hoverState=0;
 
   onStarEnter(starId: number){
@@ -30,6 +30,7 @@ onAddPost(){
 const post={
              title: this.enteredTitle,
              content: this.enteredContent };
+
              this.postCreated.emit(post);
 
   }

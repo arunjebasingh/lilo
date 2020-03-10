@@ -1,1 +1,7 @@
-<mat-toolbar color="primary">My Books</mat-toolbar>
+<mat-toolbar color="primary">
+<span>My Books</span>
+<span flex ></span>
+<a *ngIf="!loginService.isUserLoggedIn()" routerLink="/user" class="nav-link"><span>Login</span></a>
+<span flex><button mat-button *ngIf="loginService.isUserLoggedIn()" (click)="btnClick()">Logout</button>
+</span>
+</mat-toolbar>

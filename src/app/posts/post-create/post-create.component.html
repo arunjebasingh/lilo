@@ -6,7 +6,7 @@
     <textarea matInput rows='6' [(ngModel)]="enteredContent" placeholder="comment"></textarea>
   </mat-form-field><br>
   <p>Review the book</p>
-    <ng-container *ngFor="let star of stars;">
+    <ng-container *ngFor="let star of stars">
       <app-star
       (starEnter)="onStarEnter($event)"
       (starLeave)="onStarLeave($event)"
