@@ -20,7 +20,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   register() : void {
-    
+
   }
 
 }

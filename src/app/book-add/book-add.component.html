@@ -1,0 +1,27 @@
+<div>
+  <h2>Add Book Detail</h2>
+  <div>
+    <p>
+		<label>Name:
+			<input [(ngModel)]="book.bookName" placeholder="Book Name"/>
+		</label>
+    </p>
+	<p>
+		<label>ISBN:
+			<input [(ngModel)]="book.ISBN" placeholder="Book Email"/>
+		</label>
+    </p>
+    <p>
+      <label>author:
+        <input [(ngModel)]="book.author" placeholder="Book author"/>
+      </label>
+      </p>
+      <p>
+        <label>bookImage:
+          <input [(ngModel)]="book.bookImage" placeholder="Book image"/>
+        </label>
+        </p>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>

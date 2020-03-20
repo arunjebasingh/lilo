@@ -1,0 +1,23 @@
+<h3>Books</h3>
+<div>
+	<a routerLink="/add">
+		Add New Book
+	</a>
+</div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+	<th>Actions</th>
+  </tr>
+  <tr *ngFor="let book of books">
+    <td>{{book.name}}</td>
+    <td>{{book.email}}</td>
+	<td>
+		<a routerLink="/detail/{{book.id}}">Detail</a>
+		<a routerLink="/edit/{{book.id}}">Edit</a>
+		<button title="delete book" (click)="delete(book)">x</button>
+	</td>
+  </tr>
+</table>

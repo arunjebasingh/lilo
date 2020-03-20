@@ -17,6 +17,16 @@ import { SearchComponent } from './search/search.component';
 import { GoogleBookApiService } from './google-book-api.service';
 import { StarComponent } from './star/star.component';
 import { LogoutComponent } from './logout/logout.component';
+import { RouterModule } from '@angular/router';
+import { BookListComponent } from './book-list/book-list.component';
+import { BookAddComponent } from './book-add/book-add.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
+import { HttpClientModule } from "@angular/common/http";
+import { HttpModule } from '@angular/http';
+import { AboutComponent } from './about/about.component'
+
+
 
 @NgModule({
   declarations: [
@@ -30,8 +40,14 @@ import { LogoutComponent } from './logout/logout.component';
     SearchComponent,
     StarComponent,
     LogoutComponent,
+    BookListComponent,
+    BookAddComponent,
+    BookEditComponent,
+    BookDetailComponent,
+    AboutComponent,
 
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -39,6 +55,9 @@ import { LogoutComponent } from './logout/logout.component';
     FormsModule,
     AppRoutingModule,
     MatProgressSpinnerModule,
+    RouterModule,
+    HttpClientModule,
+    HttpModule,
 
 
 

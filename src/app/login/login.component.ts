@@ -36,5 +36,14 @@ export class LoginComponent implements OnInit {
     }
   }
 
-}
 
+
+ addBook() : void {
+    if(true){
+     this.router.navigate(["app-book-add"]);
+    }else {
+      alert("Invalid credentials");
+    }
+  }
+
+}
