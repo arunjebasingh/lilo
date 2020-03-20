@@ -24,7 +24,8 @@ import { BookEditComponent } from './book-edit/book-edit.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpModule } from '@angular/http';
-import { AboutComponent } from './about/about.component'
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component'
 
 
 
@@ -45,6 +46,7 @@ import { AboutComponent } from './about/about.component'
     BookEditComponent,
     BookDetailComponent,
     AboutComponent,
+    ContactComponent,
 
   ],
 
